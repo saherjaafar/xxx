@@ -7,7 +7,7 @@ namespace Core.EmailManager
 {
     public class EmailManager
     {
-        public static WedcooEmailVM info = new WedcooEmailVM { Email = "info@wedcoo.com", Password = "KeEHq6816prR" };
+        public static WedcooEmailVM info = new WedcooEmailVM { Email = "info@wedcoo.com", Password = "" };
         public static WedcooEmailVM sales = new WedcooEmailVM { Email = "sales@wedcoo.com", Password = "" };
         public static WedcooEmailVM noreply = new WedcooEmailVM { Email = "noreply@wedcoo.com", Password = "" };
 
@@ -28,7 +28,7 @@ namespace Core.EmailManager
                 message.IsBodyHtml = true;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 client.UseDefaultCredentials = false;
-                client.Credentials = new System.Net.NetworkCredential("info@wedcoo.com", "KeEHq6816prR"); // These are Real Credentials For Now
+                client.Credentials = new System.Net.NetworkCredential("info@wedcoo.com", ""); // These are Real Credentials For Now
                 client.Send(message);
                 Console.WriteLine("email success");
 
@@ -82,7 +82,7 @@ namespace Core.EmailManager
                 message.IsBodyHtml = true;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 client.UseDefaultCredentials = false;
-                client.Credentials = new System.Net.NetworkCredential("info@wedcoo.com", "KeEHq6816prR"); // These are Real Credentials For Now
+                client.Credentials = new System.Net.NetworkCredential("info@wedcoo.com", ""); // These are Real Credentials For Now
                 client.Send(message);
                 Console.WriteLine("email success");
                 return "email success";
